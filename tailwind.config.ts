@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Exotic color palette
+				exotic: {
+					purple: '#9b87f5',
+					'dark-purple': '#7E69AB',
+					'deep-purple': '#6E59A5',
+					magenta: '#D946EF',
+					teal: '#0EA5E9',
+					gold: '#F59E0B',
+					'light-gold': '#FCD34D',
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-200% 0' },
+					'100%': { backgroundPosition: '200% 0' },
+				},
+				'glow': {
+					'0%, 100%': { opacity: 0.8 },
+					'50%': { opacity: 1 },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'shimmer': 'shimmer 8s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'exotic-gradient': 'linear-gradient(45deg, #9b87f5, #D946EF, #0EA5E9)',
 			}
 		}
 	},
